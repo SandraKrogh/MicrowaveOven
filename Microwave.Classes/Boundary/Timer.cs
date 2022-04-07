@@ -2,7 +2,7 @@
 using Microwave.Classes.Interfaces;
 
 namespace Microwave.Classes.Boundary
-{
+{//TEST
     public class Timer : ITimer
     {
         public int TimeRemaining { get; private set; }
