@@ -14,8 +14,6 @@ namespace Microwave.App
 
             Door door = new Door();
 
-            //Hey hey
-
             Output output = new Output();
 
             Display display = new Display(output);
