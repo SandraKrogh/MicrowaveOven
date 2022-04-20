@@ -14,6 +14,7 @@ namespace Microwave.Classes.Boundary
         {
             myOutput = output;
             powerValue_ = powerValue;
+            //CookingTime test
         }
 
         public void TurnOn(int power)
