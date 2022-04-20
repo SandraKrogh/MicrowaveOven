@@ -8,17 +8,19 @@ namespace Microwave.Classes.Boundary
         private IOutput myOutput;
 
         private bool IsOn = false;
+        private int powerValue_;
 
-        public PowerTube(IOutput output)
+        public PowerTube(IOutput output, int powerValue)
         {
             myOutput = output;
+            powerValue_ = powerValue;
         }
 
         public void TurnOn(int power)
         {
-            if (power < 1 || 700 < power)
+            if (power < 1 || powerValue_ < power)
             {
-                throw new ArgumentOutOfRangeException("power", power, "Must be between 1 and 700 (incl.)");
+                throw new ArgumentOutOfRangeException("power", power, "Must be between 1 and powerValue (incl.)");
             }
 
             if (IsOn)
