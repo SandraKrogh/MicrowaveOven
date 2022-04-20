@@ -60,7 +60,7 @@ namespace Microwave.Classes.Controllers
             if (isCooking)
             {
                 isCooking = false;
-                
+                myBuzzer.Buzz();
                 myPowerTube.TurnOff();
                 UI.CookingIsDone();
                 myBuzzer.Buzz();
