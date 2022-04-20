@@ -14,6 +14,7 @@ namespace Microwave.Classes.Controllers
         private IDisplay myDisplay;
         private IPowerTube myPowerTube;
         private ITimer myTimer;
+        private IBuzzer myBuzzer;
 
         public CookController(
             ITimer timer,
@@ -56,6 +57,7 @@ namespace Microwave.Classes.Controllers
             if (isCooking)
             {
                 isCooking = false;
+                myBuzzer.Buzz();
                 myPowerTube.TurnOff();
                 UI.CookingIsDone();
             }
