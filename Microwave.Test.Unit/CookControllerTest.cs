@@ -36,8 +36,7 @@ namespace Microwave.Test.Unit
 
             timer.Received().Start(60);
         }
-        //TESTErrere
-        //Teste
+
         [Test]
         public void StartCooking_ValidParameters_PowerTubeStarted()
         {
