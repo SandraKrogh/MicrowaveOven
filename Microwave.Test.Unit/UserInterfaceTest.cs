@@ -336,6 +336,23 @@ namespace Microwave.Test.Unit
         }
 
 
+        [Test]
+        public void Cooking_AddTime()
+        {
+            powerButton.Pressed += Raise.EventWith(this, EventArgs.Empty);
+            // Now in SetPower
+            timeButton.Pressed += Raise.EventWith(this, EventArgs.Empty);
+            // Now in SetTime
+            startCancelButton.Pressed += Raise.EventWith(this, EventArgs.Empty);
+            // Now in cooking
+
+            // Adding time
+            timeButton.Pressed += Raise.EventWith(this, EventArgs.Empty);
+            timeButton.Pressed += Raise.EventWith(this, EventArgs.Empty);
+
+            display.Received(1).ShowTime(Arg.Is<int>(3), Arg.Is<int>(0));
+        }
+
     }
 
 }
